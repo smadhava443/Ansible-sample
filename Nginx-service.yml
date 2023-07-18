@@ -13,3 +13,20 @@
       service:
         name: nginx
         state: stopped
+
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<< nginx start>>>>
+---
+- name: Install Nginx
+  hosts: dev
+  become: true
+
+  tasks:
+    - name: Install Nginx
+      apt:
+        name: nginx
+        state: present
+    - name: start nginx
+      service:
+        name: nginx
+        state: started
