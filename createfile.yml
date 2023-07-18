@@ -1,0 +1,8 @@
+#create new file in target server
+---
+- hosts: dev
+  become: yes
+  gather_facts: false
+  tasks:
+    - name: create file name xyz
+      shell: touch xyz
